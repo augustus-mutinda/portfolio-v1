@@ -1,6 +1,6 @@
 <template>
-  <div class="p-8">
-    <p class="text-sm text-slate-400 font-inter font-light pb-4">
+  <div>
+    <p class="text-sm text-slate-400 font-inter font-light pe-4">
       Back in 2018, I decided to try my hand at
       <b class="text-sm text-slate-100 font-semibold">UI/UX</b>
       and

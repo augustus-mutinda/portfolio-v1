@@ -1,22 +1,24 @@
 <template>
-  <div v-for="(role, index) in roles" :key="index" class="pt-8">
-    <CareerSection :prop="role"/>
+  <div v-for="(project, index) in projects" :key="index" class="pt-8">
+    <ProjectWidget :prop="project"/>
   </div>
 </template>
 <script setup lang="ts">
-import CareerSection from "~/components/CareerSection.vue";
-import {ProfessionalRole} from "~/plugins/models/Role";
 
-const roles = reactive(
+import {Project} from "~/plugins/models/Project";
+import ProjectWidget from "~/components/ProjectWidget.vue";
+
+const projects = reactive(
     [
-      new ProfessionalRole(
-          "May 2023",
+      new Project(
+          "Apr 2024",
           "Now",
-          "Lead Mobile Engineer",
-          "Safaricom PLC, MyCounty",
+          "ChamaHub",
+          "https://i.pinimg.com/564x/f1/f9/56/f1f95657f98f59ca9bb0cc4c3d692839.jpg",
           "Part of the team that brought myCounty app to life!, as a dedicated team member," +
           " my responsibilities spanned across pivotal development stages, collaborating seamlessly\n" +
           "with cross-functional teams in design, development, testing, security, and QA.",
+          "https://chamahub.co.ke/",
           [
             "Android",
             "Compose",
@@ -24,35 +26,38 @@ const roles = reactive(
             "Springboot"
           ]
       ),
-      new ProfessionalRole(
-          "2021",
-          "Apr 2023",
-          "Snr. Mobile Engineer",
-          "Safaricom PLC - DigiFarm",
+      new Project(
+          "Apr 2024",
+          "Now",
+          "Safaricom Partner App",
+          "https://i.pinimg.com/564x/f1/f9/56/f1f95657f98f59ca9bb0cc4c3d692839.jpg",
           "Part of the team that brought myCounty app to life!, as a dedicated team member," +
           " my responsibilities spanned across pivotal development stages, collaborating seamlessly\n" +
           "with cross-functional teams in design, development, testing, security, and QA.",
+          "https://chamahub.co.ke/",
           [
             "Android",
             "Compose",
             "Java/Kotlin",
             "Springboot"
-          ]),
-      new ProfessionalRole(
-          "Jul",
-          "Oct 2021",
-          "Microservices Engineer",
-          "Safaricom PLC - DigiFarm",
+          ]
+      ),
+      new Project(
+          "Nov 2021",
+          "Apr 2023",
+          "DigiFarm",
+          "https://i.pinimg.com/564x/f1/f9/56/f1f95657f98f59ca9bb0cc4c3d692839.jpg",
           "Part of the team that brought myCounty app to life!, as a dedicated team member," +
           " my responsibilities spanned across pivotal development stages, collaborating seamlessly\n" +
           "with cross-functional teams in design, development, testing, security, and QA.",
+          "https://chamahub.co.ke/",
           [
-            "Docker",
-            "Postgres",
-            "Openshift",
+            "Android",
+            "Compose",
             "Java/Kotlin",
             "Springboot"
-          ]),
+          ]
+      ),
     ]
 )
 </script>

@@ -1,24 +1,13 @@
 <template>
-  <div class="flex">
-    <div class="flex-auto w-40 pt-8 ps-16 max-h-screen">
+  <div class="lg:flex lg:justify-between lg:gap-4">
+    <div class="lg:sticky lg:flex lg:max-h-screen lg:justify-between lg:w-1/2 p-8 ps-8 lg:py-16 lg:ps-32">
       <HeroLeftSection/>
     </div>
-    <div class="flex-auto w-60 pt-16 pe-16 max-h-screen overflow-y-scroll">
+    <div class="lg:w-1/2 lg:max-h-screen overflow-y-scroll p-8 lg:py-16 lg:pe-32">
       <HeroRightSection/>
       <CareersSection/>
-      <p class="text-sm text-slate-500 px-4 font-inter font-normal pb-16">
-        Loosely designed in <a class="text-slate-400 hover:text-emerald-500" href="https://penpot.app/" target="_blank">Penpot</a>
-        and coded in
-        <a class="text-slate-400 hover:text-emerald-500" href="https://www.jetbrains.com/webstorm/" target="_blank">Webstorm</a>
-        by yours truly. Built with
-        <a class="text-slate-400 hover:text-emerald-500" href="https://nuxt.com/" target="_blank">Nuxt3</a> and
-        <a class="text-slate-400 hover:text-emerald-500" href="https://tailwindcss.com/" target="_blank">Tailwind
-          CSS</a>
-        , deployed with
-        <a class="text-slate-400 hover:text-emerald-500" href="https://vercel.com/" target="_blank">Vercel</a>
-        . All text is set in the Inter
-        typeface.
-      </p>
+      <ProjectsSection/>
+      <SignOff class="pt-8"/>
     </div>
   </div>
 </template>
@@ -27,9 +16,13 @@
 import HeroLeftSection from '~/components/HeroLeftSection.vue'
 import HeroRightSection from "~/components/HeroRightSection.vue";
 import CareersSection from "~/components/CareersSection.vue";
+import Socials from "~/components/Socials.vue";
+import SignOff from "~/components/SignOff.vue";
 
 export default {
   components: {
+    SignOff,
+    Socials,
     CareersSection,
     HeroRightSection,
     HeroLeftSection

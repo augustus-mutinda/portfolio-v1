@@ -1,6 +1,6 @@
 <template>
   <FlashlightEffect>
-    <div class="bg-gradient-to-r from-slate-900 to-slate-800 illuminated-item">
+    <div class="bg-slate-900 illuminated-item">
       <NuxtPage/>
     </div>
   </FlashlightEffect>
