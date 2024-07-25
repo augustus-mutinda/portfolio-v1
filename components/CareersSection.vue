@@ -1,6 +1,9 @@
 <template>
-  <div v-for="(role, index) in roles" :key="index" class="pt-8">
-    <CareerSection :prop="role"/>
+  <div>
+    <p class="text-slate-700 font-inter font-medium text-xl pt-8">What I've been up to...</p>
+    <div v-for="(role, index) in roles" :key="index">
+      <CareerSection :prop="role"/>
+    </div>
   </div>
 </template>
 <script setup lang="ts">
