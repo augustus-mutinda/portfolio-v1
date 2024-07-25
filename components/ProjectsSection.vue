@@ -74,13 +74,27 @@ const projects = reactive(
           ]
       ),
       new Project(
+          "May 2021",
           "Nov 2021",
-          "Apr 2023",
           "Orbit Valuers",
           "https://orbitke.com/assets/img/logo.png",
           "Worked as part mobile engineer and Architect, I helped come up with the initial design" +
           " for the overall Orbit System.",
           "https://orbitke.com",
+          [
+            "Android",
+            "Compose",
+            "Java/Kotlin",
+            "Springboot"
+          ]
+      ),
+      new Project(
+          "Oct 2020",
+          "Jul 2021",
+          "Efisales",
+          "https://play-lh.googleusercontent.com/yPZdrN0pZE_W9mcvQWOg16ePvlgI1BW4NrS0UL4WRE-fE-3XTMHDvHIfq73DOTN0pyb_=w240-h480-rw",
+          "As a Fullstack Developer at Efisales Ltd, I spearheaded the end-to-end development of transformative solutions, showcasing proficiency in web, mobile, and backend technologies.",
+          "https://play.google.com/store/apps/details?id=com.efisales.apps.androidapp&hl=en",
           [
             "Android",
             "Compose",
