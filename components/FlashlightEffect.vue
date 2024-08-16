@@ -1,34 +1,48 @@
 <template>
-  <div ref="container" class="relative w-full h-full overflow-hidden" @mousemove="handleMouseMove">
-    <div
-        :style="flashlightStyle"
-        class="absolute w-64 h-64 rounded-full bg-black opacity-50 pointer-events-none"
-    ></div>
+  <div class="flashlight" @mousemove="moveFlashlight" ref="flashlight">
+    <div class="light"></div>
     <slot></slot>
   </div>
 </template>
 
-<script setup>
-import {reactive, ref} from 'vue';
-
-const container = ref(null);
-const flashlight = reactive({
-  x: 0,
-  y: 0,
-});
-
-const handleMouseMove = (event) => {
-  const rect = container.value.getBoundingClientRect();
-  flashlight.x = event.clientX - rect.left - 128; // 128 = half of flashlight diameter
-  flashlight.y = event.clientY - rect.top - 128;
+<script>
+export default {
+  methods: {
+    moveFlashlight(event) {
+      const flashlight = this.$refs.flashlight;
+      const light = flashlight.querySelector('.light');
+      const rect = flashlight.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+      light.style.setProperty('--x', `${x}px`);
+      light.style.setProperty('--y', `${y}px`);
+    }
+  }
 };
-
-const flashlightStyle = computed(() => ({
-  left: `${flashlight.x}px`,
-  top: `${flashlight.y}px`,
-}));
 </script>
 
 <style scoped>
-/* Add any additional styling if needed */
+.flashlight {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  z-index: 3000;
+}
+
+.light {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vh;
+  height: 100vh;
+  background: radial-gradient(rgba(29, 78, 216, 0.15), transparent 60%);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  mix-blend-mode: screen;
+  --x: 50%;
+  --y: 50%;
+  transform: translate3d(calc(var(--x) - 50%), calc(var(--y) - 50%), 0);
+}
 </style>
+

@@ -1,9 +1,9 @@
 <template>
-  <div class="lg:flex lg:justify-between lg:gap-4">
+  <div class="lg:flex lg:justify-between lg:gap-4 pt-12">
     <div class="lg:sticky lg:flex lg:max-h-screen lg:justify-between lg:w-1/2 p-8 ps-8 lg:py-16 lg:ps-32">
       <HeroLeftSection/>
     </div>
-    <div class="lg:w-1/2 lg:max-h-screen overflow-y-scroll p-8 lg:py-16 lg:pe-32">
+    <div class="lg:w-1/2 p-8 lg:py-16 lg:pe-32 lg:h-screen overflow-y-auto lg:flex-grow">
       <HeroRightSection/>
       <CareersSection/>
       <ProjectsSection/>
