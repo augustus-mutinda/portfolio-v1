@@ -32,8 +32,8 @@ const roles = reactive(
           "Apr 2023",
           "Snr. Mobile Engineer",
           "Safaricom PLC - DigiFarm",
-          "Part of the team that brought myCounty app to life!, as a dedicated team member," +
-          " my responsibilities spanned across pivotal development stages, collaborating seamlessly\n" +
+          "Worked on both DigiFarm and DigiFarm Village Advisor apps.\n" +
+          "My responsibilities spanned across development stages, collaborating seamlessly\n" +
           "with cross-functional teams in design, development, testing, security, and QA.",
           [
             "Android",
@@ -46,9 +46,8 @@ const roles = reactive(
           "Oct 2021",
           "Microservices Engineer",
           "Safaricom PLC - DigiFarm",
-          "Part of the team that brought myCounty app to life!, as a dedicated team member," +
-          " my responsibilities spanned across pivotal development stages, collaborating seamlessly\n" +
-          "with cross-functional teams in design, development, testing, security, and QA.",
+          "Worked on Digi Springboot microservices, migrating the architecture from.\n" +
+          "Monolith Architecture to Microservices.",
           [
             "Docker",
             "Postgres",
